@@ -1,0 +1,17 @@
+# Paths excluded from the credential scan of the build pipeline. The lines are regular expressions matched against
+# the paths in this repository and are merged with the built-in exclusions of the pipeline
+# (".*Test\.java$", "test.*\.jks$", ".*application.*test.*\.yml$").
+#
+# What is tolerated here is one single demo credential: the password "secret". It is the password of the prometheus
+# actuator user, the password of the Swagger UI with jeap.swagger.status: SECURED and the password that the login form
+# of the jEAP OAuth mock server accepts for every user. All three exist only so that this example can be run and
+# walked through on a developer machine, they are documented as such in the README, and the mock authorization server
+# they belong to issues tokens to anyone who asks and must never be deployed outside development and test.
+#
+# Every file that carries that password is listed, so that the list stays honest and a future detector for
+# basic-auth-style credentials does not break the build with a finding nobody wanted to know about.
+application-local.yml
+application-secured.yml
+README.md
+SwaggerSmokeChecks.java
+.*IT\.java$

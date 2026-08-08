@@ -1,0 +1,22 @@
+# Profile for running the example on a developer machine: --spring.profiles.active=local
+# The mock authorization server jme-swagger-auth-scs has to run as well (see the README).
+server:
+  port: 8080
+
+jeap:
+  security:
+    oauth2:
+      resourceserver:
+        authorization-server:
+          # Tokens are issued by the mock authorization server of this example.
+          issuer: "http://localhost:8081/jme-swagger-auth-scs"
+          jwk-set-uri: "${jeap.security.oauth2.resourceserver.authorization-server.issuer}/.well-known/jwks.json"
+  swagger:
+    # OPEN: the Swagger UI and the OpenAPI documents are accessible without authentication, while the
+    # documented API itself stays protected by OAuth 2.0. The default of the starter is DISABLED,
+    # see application-secured.yml for the SECURED alternative.
+    status: OPEN
+  monitor:
+    prometheus:
+      # Password of the prometheus actuator endpoint is stored unencoded - acceptable for a local demo password only.
+      password: "{noop}secret"

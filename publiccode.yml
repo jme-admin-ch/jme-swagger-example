@@ -1,0 +1,47 @@
+publiccodeYmlVersion: 0.5.0
+name: jme-swagger-example
+applicationSuite: JME
+softwareVersion: 1.1.0
+releaseDate: 2026-08-09
+url: "https://github.com/jme-admin-ch/jme-swagger-example.git"
+landingURL: "https://github.com/jme-admin-ch/jme"
+platforms:
+  - web
+categories:
+  - application-development
+developmentStatus: stable
+softwareType: standalone/backend
+organisation:
+  uri: https://ld.admin.ch/office/V.1.7
+  name: Federal Office of Information Technology, Systems and Telecommunication
+description:
+  en:
+    localisedName: jme-swagger-example
+    shortDescription: Example project demonstrating how to document the REST APIs of a jEAP microservice with the jEAP Swagger starter.
+    longDescription: >
+      This example project demonstrates how to document the REST APIs of a microservice with the
+      jEAP Swagger starter, which builds on springdoc-openapi and serves the generated OpenAPI
+      documents in an interactive Swagger UI. It shows how to declare an OpenAPI definition, how to
+      split the endpoints of a service into several API groups and API versions, how to describe
+      endpoints and payloads with OpenAPI annotations, and how to try the documented endpoints out
+      in the Swagger UI authenticated with OAuth 2.0. It also demonstrates the access modes the
+      starter provides for the Swagger UI. The example consists of a microservice documenting its
+      REST APIs (jme-swagger-service), an instance of the jEAP OAuth mock server providing the login
+      for the Swagger UI (jme-swagger-auth-scs) and a module with reusable smoke checks for the
+      Swagger endpoints and the integration tests of this example (jme-swagger-test).
+    features:
+      - REST APIs documented with springdoc-openapi annotations and served in the Swagger UI
+      - Endpoints grouped into an internal and an external API and into API versions
+      - Swagger UI access modes OPEN, SECURED and DISABLED of the jEAP Swagger starter
+      - Interactive OAuth 2.0 login in the Swagger UI using the authorization code flow with PKCE
+legal:
+  license: Apache-2.0
+maintenance:
+  type: internal
+  contacts:
+    - name: Federal Office of Information Technology, Systems and Telecommunication FOITT
+      email: jeap-community@bit.admin.ch
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en

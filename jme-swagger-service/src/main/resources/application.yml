@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: jme-swagger-service
+
+server:
+  servlet:
+    context-path: /${spring.application.name}
+
+springdoc:
+  swagger-ui:
+    # The API definitions appear in the selection box of Swagger UI sorted by name, and without this property
+    # Swagger UI preselects the first one - which would be "Actuator" not the messaging API specific to this example.
+    urls-primary-name: Messaging API
+    oauth:
+      # The client the Swagger UI uses when the user presses "Authorize". It is registered in the mock
+      # authorization server of this example (see jme-swagger-auth-scs) as a public client, therefore no
+      # client secret is configured.
+      client-id: jme-swagger-tester
+
+jeap:
+  security:
+    oauth2:
+      resourceserver:
+        system-name: "jme"

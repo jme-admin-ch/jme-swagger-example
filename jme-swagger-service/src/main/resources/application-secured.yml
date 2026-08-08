@@ -1,0 +1,11 @@
+# Demonstrates jeap.swagger.status: SECURED - the Swagger UI is protected with basic auth.
+# Activate in addition to the local profile: --spring.profiles.active=local,secured
+# Note that SECURED only protects the Swagger UI and the OpenAPI documents. Requests to the documented
+# API are still authorized with an OAuth 2.0 access token, exactly as with jeap.swagger.status: OPEN.
+jeap:
+  swagger:
+    status: SECURED
+    secured:
+      # The user name defaults to 'swagger', only the password has to be configured.
+      # {noop} means the password is stored unencoded - acceptable for a local demo password only.
+      password: "{noop}secret"

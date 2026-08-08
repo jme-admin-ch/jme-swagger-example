@@ -1,0 +1,17 @@
+# Profile for running the mock authorization server on a developer machine: --spring.profiles.active=local
+server:
+  port: 8081
+
+mockserver:
+  # Issuer of the tokens. Has to match jeap.security.oauth2.resourceserver.authorization-server.issuer
+  # of jme-swagger-service.
+  base-url: "http://localhost:${server.port}/${spring.application.name}"
+
+# Base URL of jme-swagger-service, used to build the redirect URI of its Swagger UI (see application.yml).
+service-url: "http://localhost:8080/jme-swagger-service/"
+
+jeap:
+  monitor:
+    prometheus:
+      # Password of the prometheus actuator endpoint stored unencoded - acceptable for a local demo password only.
+      password: "{noop}secret"

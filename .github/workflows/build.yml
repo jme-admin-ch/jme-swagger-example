@@ -1,0 +1,19 @@
+name: Build
+
+on:
+  push:
+    branches: [main, 'feature/**']
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: jme-admin-ch/.github/.github/workflows/build.yml@main
+    with:
+      # -DrequireBrowser=true: the GitHub hosted ubuntu runner ships Google Chrome, so the Playwright test that
+      # drives the Swagger UI has to run here instead of skipping itself when it finds no browser.
+      maven-args: '--batch-mode install -DrequireBrowser=true'
+      triggered-manually: ${{ github.event_name == 'workflow_dispatch' }}
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write

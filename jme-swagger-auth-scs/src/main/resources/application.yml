@@ -1,0 +1,34 @@
+# The jEAP OAuth mock server acts as the authorization server of this example: it issues the access
+# tokens that the Swagger UI of jme-swagger-service obtains when the user presses "Authorize".
+spring:
+  application:
+    name: jme-swagger-auth-scs
+
+server:
+  servlet:
+    context-path: /${spring.application.name}
+
+oauth-mock-data:
+  clients:
+    # The client of the Swagger UI (see springdoc.swagger-ui.oauth.client-id in jme-swagger-service).
+    - client-id: "jme-swagger-tester"
+      # USER = authorization code flow only.
+      context: "USER"
+      # Redirect URI the mock server accepts after a successful login - the redirect endpoint of the
+      # Swagger UI. The property service-url is defined per profile, see application-local.yml.
+      registered-redirect-uri: [ "${service-url}swagger-ui/oauth2-redirect.html" ]
+      # The roles that the login page of the mock server offers for selection, in addition to the roles
+      # of the users below.
+      bproles:
+        "12345": [ "jme_@swagger_#read", "jme_@swagger_#write" ]
+      userroles: [ "jme_@swagger_#read", "jme_@swagger_#write" ]
+  users:
+    # The user offered on the login page. Its roles are preselected there and end up in the access token:
+    # read and write on the resource "swagger" for the business partner 12345.
+    - id: "user"
+      given-name: "Maxine"
+      family-name: "Muster"
+      locale: "DE"
+      preferred-username: "987654321"
+      bproles:
+        "12345": [ "jme_@swagger_#read", "jme_@swagger_#write" ]

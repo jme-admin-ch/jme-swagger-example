@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="jme-swagger-service [local,secured]" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="jme-swagger-service" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ch.admin.bit.jeap.jme.swagger.Application" />
+    <option name="ACTIVE_PROFILES" value="local,secured" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
