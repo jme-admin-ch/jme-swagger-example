@@ -91,7 +91,7 @@ It starts on port 8080 and prints the URL of its Swagger UI:
 
 ### 3. Open the Swagger UI
 
-Open <http://localhost:8080/jme-swagger-service/swagger-ui.html> in a browser. The URL redirects to
+Open [http://localhost:8080/jme-swagger-service/swagger-ui.html](http://localhost:8080/jme-swagger-service/swagger-ui.html) in a browser. The URL redirects to
 `/swagger-ui/index.html`, the Swagger UI of the service.
 
 What you see is the `Messaging API`, the internal API of the service. The selection box at the top right lets you
@@ -253,7 +253,7 @@ profile (the authorization server can keep running):
 ./mvnw --projects jme-swagger-service spring-boot:run -Dspring-boot.run.profiles=local,secured
 ```
 
-Opening <http://localhost:8080/jme-swagger-service/swagger-ui.html> now makes the browser ask for credentials. Enter the
+Opening [http://localhost:8080/jme-swagger-service/swagger-ui.html](http://localhost:8080/jme-swagger-service/swagger-ui.html) now makes the browser ask for credentials. Enter the
 user `swagger` (the default of `jeap.swagger.secured.username`) and the password `secret` and the Swagger UI appears,
 behaving exactly as before, personal OAuth 2.0 login included.
 
