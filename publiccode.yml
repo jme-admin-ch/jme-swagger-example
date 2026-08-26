@@ -1,7 +1,7 @@
 publiccodeYmlVersion: 0.5.0
 name: jme-swagger-example
 applicationSuite: JME
-softwareVersion: 5.2.0
+softwareVersion: 5.3.0
 releaseDate: 2026-08-26
 url: "https://github.com/jme-admin-ch/jme-swagger-example.git"
 landingURL: "https://github.com/jme-admin-ch/jme"
