@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     uses: jme-admin-ch/.github/.github/workflows/build.yml@main
+    secrets: inherit
     with:
       # -DrequireBrowser=true: the GitHub hosted ubuntu runner ships Google Chrome, so the Playwright test that
       # drives the Swagger UI has to run here instead of skipping itself when it finds no browser.
