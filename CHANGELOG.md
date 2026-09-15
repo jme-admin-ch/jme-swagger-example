@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [7.2.0] - 2026-09-15
+
+### Dependencies
+- **com.microsoft.playwright:playwright**: 1.62.0 → 1.63.0 (minor)
+- **ch.admin.bit.jeap:jeap-oauth-mock-server**: 11.0.0 → 11.1.0 (minor)
+- **ch.admin.bit.jeap:jeap-spring-boot-parent**: 41.2.0 → 41.3.0 (minor)
+
 ## [7.1.0] - 2026-09-14
 
 ### Dependencies
