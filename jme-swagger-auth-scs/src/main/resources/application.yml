@@ -22,6 +22,8 @@ oauth-mock-data:
       bproles:
         "12345": [ "jme_@swagger_#read", "jme_@swagger_#write" ]
       userroles: [ "jme_@swagger_#read", "jme_@swagger_#write" ]
+      audience:
+        - "https://resources.jme.admin.ch/jme/jme-swagger-service"
   users:
     # The user offered on the login page. Its roles are preselected there and end up in the access token:
     # read and write on the resource "swagger" for the business partner 12345.
@@ -32,3 +34,6 @@ oauth-mock-data:
       preferred-username: "987654321"
       bproles:
         "12345": [ "jme_@swagger_#read", "jme_@swagger_#write" ]
+
+mockserver:
+  introspection-endpoint-audience-check: "on"

@@ -21,4 +21,6 @@ jeap:
   security:
     oauth2:
       resourceserver:
+        resource-id: "https://resources.jme.admin.ch/jme/jme-swagger-service"
+        strict-audience-validation: "on"
         system-name: "jme"
