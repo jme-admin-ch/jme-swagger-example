@@ -29,7 +29,7 @@
     </licenses>
 
     <artifactId>jme-swagger-example</artifactId>
-    <version>9.19.1-SNAPSHOT</version>
+    <version>9.19.2-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <parent>
@@ -46,7 +46,7 @@
     </modules>
 
     <properties>
-        <jme-spring-boot-integration-test.version>8.7.1</jme-spring-boot-integration-test.version>
+        <jme-spring-boot-integration-test.version>8.7.2</jme-spring-boot-integration-test.version>
         <maven.javadoc.skip>false</maven.javadoc.skip>
     </properties>
 
