@@ -50,7 +50,7 @@ class SwaggerExampleIT extends BootServiceIntegrationTestBase {
     private static final String PRIMARY_API_GROUP = "Messaging API";
     /**
      * System property with which a build environment that is known to provide a browser demands the browser test to
-     * run instead of being skipped. Set by the Jenkinsfile and by .github/workflows/build.yml.
+     * run instead of being skipped. Set by the Jenkinsfile.
      */
     private static final String REQUIRE_BROWSER_PROPERTY = "requireBrowser";
 
@@ -285,8 +285,8 @@ class SwaggerExampleIT extends BootServiceIntegrationTestBase {
         /**
          * Launches the system installation of Google Chrome. Not every developer machine has one, so by default the
          * test is skipped when there is none. Where a browser is part of the build environment - the Jenkins build
-         * image and the GitHub Actions runner, both of which pass {@code -DrequireBrowser=true} - a missing browser
-         * has to fail the build instead: it would silently remove the only proof that the Swagger UI can be used.
+         * image, which passes {@code -DrequireBrowser=true} - a missing browser has to fail the build instead: it
+         * would silently remove the only proof that the Swagger UI can be used.
          */
         private Browser launchSystemChrome(Playwright playwright) {
             try {
